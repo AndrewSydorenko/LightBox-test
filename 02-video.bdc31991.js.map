@@ -1,0 +1,1 @@
+{"mappings":"AAAA,MAAMA,EAAUC,SAASC,cAAc,iBAEvCC,QAAQC,IAAIJ","sources":["src/js/02-video.js"],"sourcesContent":["const videoEl = document.querySelector('#vimeo-player');\n\nconsole.log(videoEl);\n"],"names":["$c006019e0678fe87$var$videoEl","document","querySelector","console","log"],"version":3,"file":"02-video.bdc31991.js.map"}
