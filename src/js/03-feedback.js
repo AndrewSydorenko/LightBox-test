@@ -1,18 +1,11 @@
-const form = document.querySelector('.feedback-form')
+import throttle from 'lodash.throttle';
 
-const mail = form.email.value;
-const message = form.message.value;
-const LOKALESTORE = 'feedback-form-state';
+const el = {
+    form: document.querySelector('feedback-form'),
+    email: document.querySelector('feedback-forn input'),
+    message: document.querySelector('feedback-forn textarea')
+};
 
-function saveCurrentState({ }) {
-    localStorage.setItem(LOKALESTORE);
-}
+startPage();
 
-// form.addEventListener('input');
-
-form.addEventListener('input', (event) => {
-    event.preventDefault();
-    console.log({ mail, message });
-
-});
-
+const formData = {};
