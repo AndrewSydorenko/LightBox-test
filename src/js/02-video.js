@@ -13,5 +13,6 @@ player.on('timeupdate', saveCurrentTimeVideo);
 
 const currentTime = localStorage.getItem(LOCALESTORE);
 if (currentTime) {
-    player.setCurrentTime(currentTime, throttle = 1000)
+    player.setCurrentTime(currentTime)
+    throttle(currentTime, 300);
 }
