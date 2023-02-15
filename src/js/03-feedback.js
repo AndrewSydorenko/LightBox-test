@@ -1,16 +1,18 @@
-const form = document.forms[0];
-console.log(form);
+const form = document.querySelector('.feedback-form')
 
-// form.addEventListener('input', onFormSubmit);
+const mail = form.email.value;
+const message = form.message.value;
+const LOKALESTORE = 'feedback-form-state';
 
-// function onFormSubmit(event) {
-//     event.preventDefault();
+function saveCurrentState({ }) {
+    localStorage.setItem(LOKALESTORE);
+}
 
-//     const formElements = event.currentTarget.elements;
+// form.addEventListener('input');
 
-//     const mail = formElements.email.value;
-//     const message = formElements.message.value;
+form.addEventListener('input', (event) => {
+    event.preventDefault();
+    console.log({ mail, message });
 
-//     console.log({ mail, message });
-//     event.currentTarget.reset();
-// };
+});
+
