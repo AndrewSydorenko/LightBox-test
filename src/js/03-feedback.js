@@ -31,13 +31,9 @@ function onFormSubmit(event) {
 
 const textOutput = ({ elements }) => {
 
-    const savedMessage = formData;
-    if (!savedMessage) {
-        return
-    }
     const keys = Object.keys(elements).filter(el => isNaN(el));
     keys.forEach(key => {
-        elements[key].value = savedMessage[key] || '';
+        elements[key].value = formData[key] || '';
     });
 };
 

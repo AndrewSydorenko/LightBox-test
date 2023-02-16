@@ -10,10 +10,9 @@ function saveCurrentTimeVideo({ seconds }) {
     localStorage.setItem(LOCALSTORE, seconds);
 }
 
-player.on('timeupdate', saveCurrentTimeVideo);
+player.on('timeupdate', throttle(saveCurrentTimeVideo, 1000));
 
 const currentTime = localStorage.getItem(LOCALSTORE);
 if (currentTime) {
     player.setCurrentTime(currentTime)
-    throttle(currentTime, 300);
 }
