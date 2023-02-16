@@ -10,7 +10,7 @@ formEl.addEventListener('input', throttle(onFormInput, 500));
 
 function onFormInput(event) {
     formData[event.target.name] = event.target.value;
-    formJson = JSON.stringify(formData);
+    const formJson = JSON.stringify(formData);
     localStorage.setItem(STORAGE_KEY, formJson)
 };
 
